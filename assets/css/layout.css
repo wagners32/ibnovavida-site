@@ -67,7 +67,13 @@ body {
 /* MENU */
 .main-nav {
     display: flex;
+}
+
+.main-nav > ul {
+    list-style: none;
+    display: flex;
     gap: 2.2rem;
+    align-items: right;
 }
 
 .main-nav a {
@@ -86,6 +92,38 @@ body {
     color: #1faa59;
 }
 
+/* DROPDOWN "SOBRE" - DESKTOP */
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 0.8rem 1rem;
+    margin-top: 0; /* evita "buraco" entre o item e o dropdown */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    min-width: 190px;
+}
+
+.submenu li + li {
+    margin-top: 0.6rem; /* espaçamento vertical entre itens do submenu */
+}
+
+.submenu a {
+    font-size: 13px;
+    white-space: nowrap;
+    padding: 0.2rem 0; /* aumenta a área clicável */
+}
+
+.has-submenu:hover > .submenu {
+    display: block;
+}
+
 /* SOCIAIS */
 .social {
     display: flex;
@@ -94,15 +132,25 @@ body {
 
 .social a {
     text-decoration: none;
-    font-size: 16px;
     color: #1f3b1f;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #1f3b1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .social a:hover {
-    color: #1faa59;
+    color: #fff;
+    background: #1faa59;
+    border-color: #1faa59;
 }
 
-/* MOBILE BUTTON */
+/* BOTÃO MOBILE (ESCONDIDO NO DESKTOP) */
 .menu-toggle {
     display: none;
     background: #222;
@@ -114,26 +162,9 @@ body {
     border-radius: 4px;
 }
 
-.main-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    width: 220px;
-    padding: 1rem;
-    gap: 1.2rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    display: none;
-}
-
-.main-nav.active {
-    display: flex;
-}
-
 
 /* =========================
-   HERO
+   HERO HOME
 ========================= */
 .hero {
     position: relative;
@@ -227,7 +258,7 @@ body {
 
 
 /* =========================
-   SLIDER HERO
+   SLIDER HERO HOME
 ========================= */
 .hero-slider {
     position: relative;
@@ -245,7 +276,7 @@ body {
     transition: opacity 0.8s ease-in-out;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center; /* centraliza os dois slides horizontalmente */
 }
 
 .slide.active {
@@ -263,7 +294,8 @@ body {
     position: relative;
     color: #fff;
     max-width: 480px;
-    margin-right: 8%;
+    margin-right: 0;
+    text-align: center;
 }
 
 .hero-content h1 {
@@ -308,6 +340,183 @@ body {
 
 .nav.next {
     right: 20px;
+}
+
+
+/* =========================
+   HERO PÁGINA INTERNA (QUEM SOMOS, ETC.)
+========================= */
+.page-hero {
+    position: relative;
+    height: 280px;
+    margin-top: 80px; /* altura do header fixo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero-quem-somos {
+    /* ajuste o caminho da imagem da cruz aqui, se for diferente */
+    background-image: url("assets/img/slider/bg-3.jpg");
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.page-hero-inner {
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.page-hero-inner h1 {
+    font-size: 36px;
+    letter-spacing: 4px;
+}
+
+/* CONTEÚDO QUEM SOMOS */
+.quem-somos-conteudo {
+    padding: 4rem 0 5rem;
+}
+
+.quem-somos-texto {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #444;
+}
+
+.quem-somos-texto p + p {
+    margin-top: 1rem;
+}
+
+.quem-somos-logos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* alinha pela base dos logos */
+    gap: 3.5rem;
+    margin-top: 4rem;  /* espaço entre texto e logos */
+    margin-bottom: 2.5rem; /* respiro antes do footer */
+    flex-wrap: wrap;
+}
+
+.quem-somos-logos img {
+    display: block;
+    max-height: 60px;
+    width: auto;
+}
+
+/* PÁGINA NOSSOS PASTORES */
+.pastores-page {
+    padding: 6rem 0 5rem;
+    margin-top: 80px; /* compensa o header fixo, já que aqui não há hero com imagem */
+}
+
+.pastores-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pastores-header h1 {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 0.8rem;
+}
+
+.pastores-header hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.pastores-texto {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.pastores-texto h2 {
+    font-size: 18px;
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.pastores-texto h3 {
+    font-size: 16px;
+    margin-top: 1.6rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.pastores-texto p {
+    margin-top: 0.2rem;
+}
+
+/* PÁGINA DE CONTATO */
+.contato-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.contato-social a {
+    color: #1faa59;
+    font-size: 28px;
+    transition: color 0.2s ease;
+}
+
+.contato-social a:hover {
+    color: #1f3b1f;
+}
+
+.contato-info {
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+}
+
+.contato-bloco + .contato-bloco {
+    margin-top: 1.8rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.contato-info h2 {
+    font-size: 16px;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.contato-info p {
+    margin: 0;
+}
+
+.contato-mapa {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.contato-mapa iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 320px;
+    border: 0;
 }
 
 /* =========================
@@ -387,15 +596,33 @@ body {
     }
 
     .main-nav.active {
-        display: flex;
+        display: block;
         position: absolute;
         top: 100%;
         right: 1.5rem;
         background: #fff;
-        flex-direction: column;
         padding: 1rem 1.5rem;
-        gap: 1.2rem;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .main-nav.active > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* submenu no mobile: aparece em coluna junto ao menu */
+    .submenu {
+        position: static;
+        box-shadow: none;
+        margin-top: 0.3rem;
+        padding-left: 0; /* alinha a caixa do submenu com os demais itens */
+        display: block;
+    }
+
+    /* recuo só no texto, para ficar organizado sob "Sobre" */
+    .submenu a {
+        padding-left: 1.2rem;
     }
 
 }

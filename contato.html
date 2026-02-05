@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Igreja Batista Nova Vida</title>
+
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body class="contato">
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="Igreja Batista Nova Vida">
+            </div>
+
+            <!-- MENU + SOCIAIS (MESMO DA HOME) -->
+            <div class="header-right">
+
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+
+                        <li class="has-submenu">
+                            <!-- "Sobre" apenas abre o submenu, não navega -->
+                            <a href="javascript:void(0)">Sobre</a>
+
+                            <!-- submenu -->
+                            <ul class="submenu">
+                                <li><a href="quem-somos.html">Quem somos</a></li>
+                                <li><a href="nossos-pastores.html">Nossos Pastores</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contato.html" class="active">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="social">
+                    <a href="https://www.facebook.com/ibnovavida95/" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ibnovavida95/" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ibnovavida" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+
+                <!-- MOBILE -->
+                <button class="menu-toggle" id="menuToggle">☰</button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <section class="pastores-page contato-page">
+            <div class="container pastores-header">
+                <h1>Contato</h1>
+                <hr>
+            </div>
+
+            <!-- Ícones das redes sociais em destaque -->
+            <div class="container contato-social">
+                <a href="https://www.facebook.com/ibnovavida95/" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ibnovavida95/" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@ibnovavida" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+            <!-- Informações de contato -->
+            <div class="container contato-info">
+                <div class="contato-bloco">
+                    <h2>Telefone:</h2>
+                    <p>(41) 3344-7143</p>
+                </div>
+
+                <div class="contato-bloco">
+                    <h2>Horários de culto:</h2>
+                    <p>Domingo 18:30</p>
+                </div>
+
+                <div class="contato-bloco">
+                    <h2>Endereço:</h2>
+                    <p>Rua Diogo Mugiatti, 753 – Boqueirão, Curitiba – PR, 81730-360</p>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="container contato-mapa">
+                <iframe
+                    src="https://www.google.com/maps?q=Rua+Diogo+Mugiatti,+753,+Curitiba,+PR&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Logos das convenções -->
+            <div class="container quem-somos-logos">
+                <img src="assets/img/logos/convencao-batista-paranaense.png" alt="Convenção Batista Paranaense">
+                <img src="assets/img/logos/convencao-batista-brasileira.png" alt="Convenção Batista Brasileira">
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/menu.js"></script>
+</body>
+
+</html>
+

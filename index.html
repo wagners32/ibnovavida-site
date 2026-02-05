@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Igreja Batista Nova Vida</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/layout.css">
 </head>
 
@@ -13,32 +13,38 @@
 
     <header class="site-header">
         <div class="header-container">
-
-            <!-- LOGO -->
             <div class="logo">
                 <img src="assets/img/logo.png" alt="Igreja Batista Nova Vida">
             </div>
-
-            <!-- MENU + SOCIAIS -->
             <div class="header-right">
 
                 <nav class="main-nav" id="mainNav">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="sobre.html">Sobre</a>
-                    <a href="contato.html">Contato</a>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li class="has-submenu">
+                            <a href="javascript:void(0)">Sobre</a>
+                            <ul class="submenu">
+                                <li><a href="quem-somos.html">Quem somos</a></li>
+                                <li><a href="nossos-pastores.html">Nossos Pastores</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
                 </nav>
-
                 <div class="social">
-                    <a href="#" aria-label="Facebook">f</a>
-                    <a href="#" aria-label="Instagram">◎</a>
-                    <a href="#" aria-label="YouTube">▶</a>
+                    <a href="https://www.facebook.com/ibnovavida95/" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ibnovavida95/" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ibnovavida" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
-
-                <!-- MOBILE -->
                 <button class="menu-toggle" id="menuToggle">☰</button>
-
             </div>
-
         </div>
     </header>
 
@@ -117,13 +123,6 @@
 
         </div>
     </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>© Igreja Batista Nova Vida</p>
-        </div>
-    </footer>
 
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/menu.js"></script>
